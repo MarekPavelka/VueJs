@@ -1,0 +1,24 @@
+GET https://localhost:44376/Employees
+
+###
+
+GET https://localhost:44376/EmployeePosition
+
+###
+
+POST https://localhost:44376/Employees
+Content-Type: application/json
+
+{
+    "firstName": "fedor1232",
+    "surname": "fedor232",
+    "address": "Lolo22",
+    "birthday": "2019-12-03",
+    "startDate": "2021-12-03",
+    "salary": 200,
+    "isArchived": false,
+    "position": {
+        "id": 1,
+        "positionName": "string"
+    }
+}

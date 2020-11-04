@@ -1,0 +1,21 @@
+.myAboveTable {
+  height: 2rem;
+}
+/* table.table-hover tbody tr:hover {
+  background-color: #d0d5d6;
+} */
+.nav-item.nav-item.nav-item a.router-link-active {
+  color: black;
+  font-weight: 500;
+}
+
+.nav-item.nav-item.nav-item a:hover {
+  text-decoration: underline;
+}
+
+#navbar-home.router-link-exact-active {
+  font-weight: 500;
+}
+#navbar-home:hover {
+  text-decoration: underline;
+}
