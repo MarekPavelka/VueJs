@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JaI5wSD2KUjgf//V2umql+aPJ2O1IeQWSAKeSUs7NAMkIDHunjYbvCZ6JJlKa0KZiJtq50Oj3GS/VOAB1deM1g==",
+  "dgSpecHash": "igeaPpQJ36uZIxI/kaJqRIxVfo5gJG/3adtFKz2sWhdp8sjU25/0IZMRIrH0kyNRqNiLSbsQcdYBkbAS4Vyung==",
   "success": true,
   "projectFilePath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,6 @@
     "C:\\Users\\LoisLane\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
-    "C:\\Users\\LoisLane\\.nuget\\packages\\json.net\\1.0.23\\json.net.1.0.23.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",

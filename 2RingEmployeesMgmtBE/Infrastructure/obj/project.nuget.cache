@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6aMLPHTywtEcssDYmvxwzqE7YSrrQsZetKMCWZjGw+48RY39rtWEw7bHqJNx1w/9AKtMEGq5GCfSabDuQLjUMA==",
+  "dgSpecHash": "77Cuc2jBbAH0/pJDItXAdSkDDBQRT16v0P/amAfkUA67Onx8x5ok97kB43lw8rmW3wW0+cDIHAyj3f+t/22f9A==",
   "success": true,
   "projectFilePath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LoisLane\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
-    "C:\\Users\\LoisLane\\.nuget\\packages\\json.net\\1.0.23\\json.net.1.0.23.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

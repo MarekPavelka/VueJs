@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "mxFUkIiXIkbSrH32m5x5AwZ6f/QjLOfl2PqG7ISvODcMQBbmW8qt1zkoL2LFTrsZYwmXcr30ovda0EMrhtWsow==",
+  "dgSpecHash": "P0It4zNMjSKSEltrpy/BuY1qagJeWrko4HkHmuaO5NxD+NWc+acu2qNdW0yub4XQKw/9s06PPNf+VMllXovC4A==",
   "success": true,
   "projectFilePath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\2RingEmployeesMgmt\\2RingEmployeesMgmt.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LoisLane\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
-    "C:\\Users\\LoisLane\\.nuget\\packages\\json.net\\1.0.23\\json.net.1.0.23.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

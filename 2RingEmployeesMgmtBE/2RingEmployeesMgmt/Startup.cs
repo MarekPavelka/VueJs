@@ -23,22 +23,12 @@ namespace _2RingEmployeesMgmt
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
             {
                 builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().WithOrigins("http://localhost:8080");
             }));
-
-            //services.AddCors(options =>
-            //{
-            //    options.AddDefaultPolicy(
-            //        builder =>
-            //        {
-            //            builder.WithOrigins("http://localhost:8080/", "http://localhost:8081/");
-            //        });
-            //});
 
             services.AddControllers().AddJsonOptions(options =>
             {
@@ -49,7 +39,7 @@ namespace _2RingEmployeesMgmt
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "2RingEmployeeMgmt", Version = "v1" });
             });
 
-            //connect to database
+            //database
             services.AddDbContext<EmployeesDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("2RingEmployeeDb"));
@@ -64,7 +54,6 @@ namespace _2RingEmployeesMgmt
             services.AddTransient<IValidator<Position>, PositionValidator>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -77,9 +66,6 @@ namespace _2RingEmployeesMgmt
             app.UseRouting();
 
             app.UseCors("CorsPolicy");
-
-            //app.UseCors(options =>
-            //    options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseAuthorization();
 

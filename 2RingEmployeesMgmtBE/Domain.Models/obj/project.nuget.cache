@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "Izkdxdghe1hz/Alzw+fhpmBtjNbnEKDKqpgpLhjd5xcq4cITWYj35SgSM5PBXm5WbrZtI1DU4sgOVPEBCZuCag==",
+  "dgSpecHash": "nw6nWTFjzWB7sDMwyfDwaGNbd5sORSrVBCnR+i9ApYGW02ud44ItBV3R+9CTpO/yQ8uzcZ6z9G7LYVWT89KXIg==",
   "success": true,
   "projectFilePath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Domain.Models\\Domain.Models.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\LoisLane\\.nuget\\packages\\json.net\\1.0.23\\json.net.1.0.23.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
