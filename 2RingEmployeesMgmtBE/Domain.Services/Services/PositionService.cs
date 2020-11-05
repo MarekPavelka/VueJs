@@ -1,6 +1,5 @@
 ﻿using Domain.Models;
 using Domain.Services.Interfaces;
-using Domain.Services.Validation;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
