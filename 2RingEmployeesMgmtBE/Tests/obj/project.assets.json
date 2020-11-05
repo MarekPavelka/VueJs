@@ -8799,11 +8799,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Tests\\Tests.csproj",
+      "projectUniqueName": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Tests\\Tests.csproj",
       "projectName": "Tests",
-      "projectPath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Tests\\Tests.csproj",
+      "projectPath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Tests\\Tests.csproj",
       "packagesPath": "C:\\Users\\LoisLane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Tests\\obj\\",
+      "outputPath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LoisLane\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8819,11 +8819,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\2RingEmployeesMgmt\\2RingEmployeesMgmt.csproj": {
-              "projectPath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\2RingEmployeesMgmt\\2RingEmployeesMgmt.csproj"
+            "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\2RingEmployeesMgmt\\2RingEmployeesMgmt.csproj": {
+              "projectPath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\2RingEmployeesMgmt\\2RingEmployeesMgmt.csproj"
             },
-            "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Infrastructure\\Infrastructure.csproj"
+            "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

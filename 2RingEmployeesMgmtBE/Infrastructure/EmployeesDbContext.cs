@@ -22,9 +22,7 @@ namespace Infrastructure
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Employee>().HasMany(e => e.PositionHistory).WithOne().IsRequired().OnDelete(DeleteBehavior.Cascade);
-            modelBuilder.Entity<EmployeePositionHistory>().HasOne(h => h.Position).WithMany().OnDelete(DeleteBehavior.SetNull);
-            modelBuilder.Entity<Employee>().HasOne(e => e.Position).WithMany().OnDelete(DeleteBehavior.SetNull);
+            modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
             modelBuilder.SingularizeTableNames();
         }
 
@@ -73,6 +71,7 @@ namespace Infrastructure
         {
             Remove(entity);
         }
+
         void IUnitOfWork.SetEntityState<T>(T entity, State entityState)
         {
             Entry(entity).State = (EntityState)entityState;

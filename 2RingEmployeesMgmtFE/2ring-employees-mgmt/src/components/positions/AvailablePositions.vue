@@ -141,11 +141,12 @@ export default class AvailablePositions extends Vue {
       const allPositions = await PositionService.getAllPositions();
       this.allPositions = allPositions;
     } catch (error) {
-      this.$notification.error(error.response.data);
+      this.showErrorNotification(error);
     } finally {
       this.isLoadingData = false;
     }
   }
+
   async createPosition(): Promise<void> {
     if (!this.checkFormValidity()) {
       return;
@@ -159,7 +160,7 @@ export default class AvailablePositions extends Vue {
       this.allPositions.push(addedPosition);
       this.$notification.success("Position created successfully");
     } catch (error) {
-      this.$notification.error(error.toString());
+      this.showErrorNotification(error);
     } finally {
       this.selectedPosition = new Position();
       this.$nextTick(() => {
@@ -168,6 +169,7 @@ export default class AvailablePositions extends Vue {
       this.isLoadingData = false;
     }
   }
+
   async deletePosition(): Promise<void> {
     try {
       this.isLoadingData = true;
@@ -177,25 +179,34 @@ export default class AvailablePositions extends Vue {
       );
       this.$notification.success("Position deleted successfully");
     } catch (error) {
-      this.$notification.error(error);
+      this.showErrorNotification(error);
     } finally {
       this.isLoadingData = false;
     }
   }
 
-  //helpers
   private handleCreatePosition(e: any) {
     e.preventDefault();
     this.createPosition();
   }
+
   private checkFormValidity() {
     const isValid = (<any>this).$refs.formAddPosition.checkValidity();
     this.isPositionNameValid = isValid;
     return isValid;
   }
+
   private resetModal() {
     this.positionToAdd.PositionName = "";
     this.isPositionNameValid = null;
+  }
+
+  private showErrorNotification(error: any): void {
+    if (error.response) {
+      this.$notification.error(error.response.data);
+    } else {
+      this.$notification.error(error.toString());
+    }
   }
 }
 </script>

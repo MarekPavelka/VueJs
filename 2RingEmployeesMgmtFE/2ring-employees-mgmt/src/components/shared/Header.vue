@@ -36,7 +36,5 @@ export default class Header extends Vue {
   currentEmployeesRoute: any = { name: "currentEmployees" };
   previousEmployeesRoute: any = { name: "previousEmployees" };
   positionsRoute: any = { name: "availablePositions" };
-
-  created() {}
 }
 </script>

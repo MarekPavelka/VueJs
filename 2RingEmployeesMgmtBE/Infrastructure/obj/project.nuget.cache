@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FvBZPdAGQk1hzgONvl8x3/Rzr3JCQ0IGfOct6AX/SXlgtC9oAQAjT71A15ARxk5BL8bXbfhMTDa/iwLtSsoY+A==",
+  "dgSpecHash": "6aMLPHTywtEcssDYmvxwzqE7YSrrQsZetKMCWZjGw+48RY39rtWEw7bHqJNx1w/9AKtMEGq5GCfSabDuQLjUMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LoisLane\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",

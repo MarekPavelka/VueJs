@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ktpz8ECy4Z/dF7ym4KzhIQdBC/6KqXn/Y69ePVvSClHZRdOLECcyPZgTS2jWHkxCGYJN4SBgXV9QgM8OVsG/FQ==",
+  "dgSpecHash": "JaI5wSD2KUjgf//V2umql+aPJ2O1IeQWSAKeSUs7NAMkIDHunjYbvCZ6JJlKa0KZiJtq50Oj3GS/VOAB1deM1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Tests\\Tests.csproj",
+  "projectFilePath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LoisLane\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",

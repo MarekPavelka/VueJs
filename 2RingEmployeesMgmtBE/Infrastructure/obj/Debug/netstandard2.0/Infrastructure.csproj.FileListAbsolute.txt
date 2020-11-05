@@ -26,3 +26,17 @@ C:\Users\LoisLane\Desktop\2Ring\2RingEmployeesMgmt\Infrastructure\obj\Debug\nets
 C:\Users\LoisLane\Desktop\2Ring\2RingEmployeesMgmt\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csproj.CopyComplete
 C:\Users\LoisLane\Desktop\2Ring\2RingEmployeesMgmt\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.dll
 C:\Users\LoisLane\Desktop\2Ring\2RingEmployeesMgmt\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.pdb
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\bin\Debug\netstandard2.0\Infrastructure.deps.json
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\bin\Debug\netstandard2.0\Infrastructure.dll
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\bin\Debug\netstandard2.0\Infrastructure.pdb
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\bin\Debug\netstandard2.0\Domain.Models.dll
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\bin\Debug\netstandard2.0\Domain.Services.dll
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\bin\Debug\netstandard2.0\Domain.Models.pdb
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\bin\Debug\netstandard2.0\Domain.Services.pdb
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csprojAssemblyReference.cache
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.AssemblyInfoInputs.cache
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.AssemblyInfo.cs
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csproj.CoreCompileInputs.cache
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csproj.CopyComplete
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.dll
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.pdb

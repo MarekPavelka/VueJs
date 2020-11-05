@@ -83,7 +83,7 @@
                     </div>
                     <b-form-input
                       :state="validity.Birthday"
-                      :disabled="isDetailPage"
+                      disabled
                       class="form-control"
                       :value="inputValue"
                       placeholder="DD.MM.YYYY"
@@ -100,13 +100,13 @@
 
             <div class="form-group">
               <label> Start date</label>
-              <v-date-picker v-model="employee.StartDate">
+              <v-date-picker v-model="employee.StartDate" v-if="!isEditPage">
                 <template v-slot="{ inputValue, togglePopover }">
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <b-button
-                        variant="primary"
                         :disabled="isDetailPage"
+                        variant="primary"
                         type="button"
                         @click="togglePopover({ placement: 'bottom-start' })"
                       >
@@ -114,8 +114,8 @@
                       </b-button>
                     </div>
                     <b-form-input
+                      disabled
                       :state="validity.StartDate"
-                      :disabled="isDetailPage"
                       class="form-control"
                       :value="inputValue"
                       placeholder="DD.MM.YYYY"
@@ -127,6 +127,9 @@
                   </div>
                 </template>
               </v-date-picker>
+              <div v-else class="form-control">
+                {{ getDatePickerDateFormat(employee.StartDate) }}
+              </div>
             </div>
             <div class="form-group">
               <label>Salary</label>
@@ -143,21 +146,30 @@
             </div>
             <div class="form-group">
               <label class="col-form-label">Position </label>
-              <b-form-select
-                :state="validity.Position"
-                :disabled="isDetailPage"
-                class="custom-select"
-                v-model="employee.Position.PositionName"
-              >
-                <option
-                  v-for="position in availablePositions"
-                  :key="position.Id"
-                  :selected="availablePositions[0]"
-                  >{{ position.PositionName }}</option
+              <template v-if="!isDetailPage">
+                <b-form-select
+                  :state="validity.Position"
+                  :disabled="isDetailPage"
+                  v-model="selectedPositionId"
+                  :options="availablePositions"
+                  value-field="Id"
+                  text-field="PositionName"
                 >
-              </b-form-select>
-              <b-form-invalid-feedback></b-form-invalid-feedback>
-              <b-form-valid-feedback> </b-form-valid-feedback>
+                </b-form-select>
+                <b-form-invalid-feedback
+                  >Position is required</b-form-invalid-feedback
+                >
+                <b-form-valid-feedback> </b-form-valid-feedback>
+              </template>
+              <b-form-input
+                v-else
+                disabled
+                :value="
+                  employee.Position.Id == 0
+                    ? 'N/A'
+                    : employee.Position.PositionName
+                "
+              />
             </div>
             <div class="pt-4">
               <b-button
@@ -196,34 +208,45 @@
             </tr>
           </thead>
           <tbody>
-            <tr
-              v-for="positionHistory in employee.PositionHistory"
-              :key="positionHistory.Id"
-            >
-              <td>
-                <div
-                  class="text-primary"
-                  v-if="positionHistory.EndDate == null"
-                >
-                  {{ positionHistory.Position.PositionName }}
-                </div>
-                <div v-else>
-                  {{ positionHistory.Position.PositionName }}
-                </div>
-              </td>
-              <td>{{ positionHistory.StartDate | filterDate }}</td>
-              <td>
-                <div
-                  class="text-primary"
-                  v-if="positionHistory.EndDate == null"
-                >
-                  current position
-                </div>
-                <div v-else>
-                  {{ positionHistory.EndDate | filterDate }}
-                </div>
-              </td>
-            </tr>
+            <template v-for="positionHistory in employee.PositionHistory">
+              <tr
+                v-if="positionHistory.Position !== null"
+                :key="positionHistory.Id"
+              >
+                <td>
+                  <div
+                    class="text-primary"
+                    v-if="positionHistory.EndDate == null"
+                  >
+                    {{ positionHistory.Position.PositionName }}
+                  </div>
+                  <div v-else>
+                    {{ positionHistory.Position.PositionName }}
+                  </div>
+                </td>
+                <td>{{ positionHistory.StartDate | filterDate }}</td>
+                <td>
+                  <div
+                    class="text-primary"
+                    v-if="positionHistory.EndDate == null"
+                  >
+                    current position
+                  </div>
+                  <div v-else>
+                    {{ positionHistory.EndDate | filterDate }}
+                  </div>
+                </td>
+              </tr>
+              <tr v-else :key="positionHistory.Id">
+                <td>
+                  <div class="text-danger">
+                    N/A
+                  </div>
+                </td>
+                <td>{{ positionHistory.StartDate | filterDate }}</td>
+                <td>{{ positionHistory.EndDate | filterDate }}</td>
+              </tr>
+            </template>
           </tbody>
         </table>
       </b-card>
@@ -261,11 +284,13 @@ export default class EmployeeDetail extends Vue {
   formWasValidated: boolean = false;
   validity: EmployeeValidity = this.clearValidity();
   showForm: boolean = true;
+  selectedPositionId: number = 0;
 
   created() {
     this.setComponentFlags();
     this.initializeEmployeeModel();
   }
+
   setComponentFlags(): void {
     if (router.currentRoute.name == "editEmployee") this.isEditPage = true;
 
@@ -274,13 +299,15 @@ export default class EmployeeDetail extends Vue {
     if (router.currentRoute.name == "previousEmployeeDetail")
       this.isDetailPage = true;
   }
+
   async initializeEmployeeModel(): Promise<void> {
     try {
       if (this.isCreatePage) {
         this.isLoadingData = true;
         const positions = await PositionService.getAllPositions();
         this.availablePositions = positions;
-        this.employee.Position = positions[0];
+        this.selectedPositionId = this.availablePositions[0].Id;
+        this.employee.Position = this.availablePositions[0];
         return;
       } else {
         const [positions, employee] = await Promise.all([
@@ -290,29 +317,33 @@ export default class EmployeeDetail extends Vue {
 
         this.availablePositions = positions;
         this.employee = employee;
+        this.selectedPositionId = this.employee.Position.Id;
       }
     } catch (error) {
-      this.$notification.error(error);
+      this.showErrorNotification(error);
     } finally {
       this.isLoadingData = false;
+      console.log(this.employee.Position);
     }
   }
+
   async saveEmployee(): Promise<void> {
+    this.employee.Position = this.availablePositions.filter(
+      (p) => p.Id == this.selectedPositionId
+    )[0];
     let isFormValid = this.validateForm();
     if (!isFormValid) {
       (<any>this).$refs.employeeForm.reset();
       return;
     }
-    this.employee.Position = this.availablePositions.filter(
-      (p) => p.PositionName == this.employee.Position.PositionName
-    )[0];
+
     this.employee.Salary = parseFloat(<any>this.employee.Salary);
+    this.isLoadingData = true;
     try {
-      this.isLoadingData = true;
       if (this.isCreatePage) {
         await EmployeeService.createEmployee(this.employee);
         this.employee = new Employee();
-        this.employee.Position = this.availablePositions[0];
+        this.selectedPositionId = this.availablePositions[0].Id;
       }
       if (this.isEditPage) {
         await EmployeeService.updateEmployee(this.employee);
@@ -324,13 +355,16 @@ export default class EmployeeDetail extends Vue {
       this.validity = this.clearValidity();
       this.$notification.success("Employee saved successfully");
     } catch (error) {
-      this.$notification.error(error);
+      this.showErrorNotification(error);
     } finally {
       this.isLoadingData = false;
     }
   }
 
-  //helpers
+  getDatePickerDateFormat(date: Date) {
+    return date.toLocaleDateString().replace(/ /g, "");
+  }
+
   private validateForm(): boolean {
     this.validity.FirstName = this.employee.FirstName.length > 1;
     this.validity.Surname = this.employee.Surname.length > 1;
@@ -346,26 +380,30 @@ export default class EmployeeDetail extends Vue {
 
     return isFormValid;
   }
+
   private validateStartDate(startDate: Date | null): boolean {
     if (startDate == null) {
       return false;
     }
     const newDate = new Date();
-    const isValid =
-      startDate.getFullYear() >= newDate.getFullYear() &&
-      startDate.getMonth() >= newDate.getMonth() &&
-      startDate.getDate() >= newDate.getDate();
+    let isValid = true;
+    if (this.isCreatePage) {
+      isValid =
+        startDate.getFullYear() >= newDate.getFullYear() &&
+        startDate.getMonth() >= newDate.getMonth() &&
+        startDate.getDate() >= newDate.getDate();
+    }
 
     return isValid;
   }
+
   private validateBirthDay(birthDay: any): boolean {
-    if (birthDay == null) {
-      return false;
-    }
+    if (birthDay == null) return false;
 
     const isValid = birthDay <= new Date();
     return isValid;
   }
+
   private onReset(evt: any): void {
     evt.preventDefault();
     this.showForm = false;
@@ -373,6 +411,7 @@ export default class EmployeeDetail extends Vue {
       this.showForm = true;
     });
   }
+
   private clearValidity(): EmployeeValidity {
     return {
       FirstName: null,
@@ -383,6 +422,14 @@ export default class EmployeeDetail extends Vue {
       Salary: null,
       Position: null,
     };
+  }
+
+  private showErrorNotification(error: any): void {
+    if (error.response) {
+      this.$notification.error(error.response.data);
+    } else {
+      this.$notification.error(error.toString());
+    }
   }
 }
 </script>
