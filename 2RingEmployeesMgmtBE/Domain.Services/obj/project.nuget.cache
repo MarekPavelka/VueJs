@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hj732bYpYctdmKUKMMxS4l6sU3T/EFYFZ0/nOTYCk4uT7dPmRWuCtrb0Lec6VUYDboy7tPNXwDvKeJhCUlqmAw==",
+  "dgSpecHash": "ZRaPK/5PS8qZIag+g6JWy3gnp4kaX2Hw5MO7ksDKC30sP0HOWMIRci3JJwyVFEGDEUaMOdrPgosYElPrPVzYGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Domain.Services\\Domain.Services.csproj",
+  "projectFilePath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Domain.Services\\Domain.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LoisLane\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\json.net\\1.0.23\\json.net.1.0.23.nupkg.sha512",

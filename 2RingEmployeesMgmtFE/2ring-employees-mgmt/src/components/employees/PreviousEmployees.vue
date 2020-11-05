@@ -35,7 +35,13 @@
                   >{{ employee | employeeFullName }}</a
                 >
               </td>
-              <td>{{ employee.Position.PositionName }}</td>
+              <td>
+                {{
+                  employee.Position.Id == 0
+                    ? "N/A"
+                    : employee.Position.PositionName
+                }}
+              </td>
               <td>
                 {{ employee.LastModified | filterDate }}
               </td>
@@ -95,20 +101,23 @@ export default class PreviousEmployees extends Vue {
   created() {
     this.initializeEmployees();
   }
+
   async initializeEmployees(): Promise<void> {
     try {
       this.isLoadingData = true;
       this.previousEmployees = await EmployeeService.getArchivedEmployees();
     } catch (error) {
-      this.$notification.error(error);
+      this.showErrorNotification(error);
     } finally {
       this.isLoadingData = false;
     }
   }
+
   navigateToEmployeeDetails(employeeId: Number): void {
     this.employeeDetailsRoute.params = { id: employeeId };
     this.$router.push(this.employeeDetailsRoute);
   }
+
   async deleteEmplopyee(employee: Employee): Promise<void> {
     try {
       this.isLoadingData = true;
@@ -118,9 +127,17 @@ export default class PreviousEmployees extends Vue {
       );
       this.$notification.success("Employee deleted successfully");
     } catch (error) {
-      this.$notification.error(error);
+      this.showErrorNotification(error);
     } finally {
       this.isLoadingData = false;
+    }
+  }
+
+  private showErrorNotification(error: any): void {
+    if (error.response) {
+      this.$notification.error(error.response.data);
+    } else {
+      this.$notification.error(error.toString());
     }
   }
 }

@@ -1231,11 +1231,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Domain.Services\\Domain.Services.csproj",
+      "projectUniqueName": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Domain.Services\\Domain.Services.csproj",
       "projectName": "Domain.Services",
-      "projectPath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Domain.Services\\Domain.Services.csproj",
+      "projectPath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Domain.Services\\Domain.Services.csproj",
       "packagesPath": "C:\\Users\\LoisLane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Domain.Services\\obj\\",
+      "outputPath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Domain.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LoisLane\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1251,8 +1251,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Domain.Models\\Domain.Models.csproj": {
-              "projectPath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Domain.Models\\Domain.Models.csproj"
+            "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Domain.Models\\Domain.Models.csproj": {
+              "projectPath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Domain.Models\\Domain.Models.csproj"
             }
           }
         }

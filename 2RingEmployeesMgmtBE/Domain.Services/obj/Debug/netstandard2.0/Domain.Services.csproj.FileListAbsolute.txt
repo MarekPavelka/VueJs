@@ -19,3 +19,15 @@ C:\Users\LoisLane\Desktop\2Ring\2RingEmployeesMgmt\Domain.Services\obj\Debug\net
 C:\Users\LoisLane\Desktop\2Ring\2RingEmployeesMgmt\Domain.Services\obj\Debug\netstandard2.0\Domain.Services.csproj.CopyComplete
 C:\Users\LoisLane\Desktop\2Ring\2RingEmployeesMgmt\Domain.Services\obj\Debug\netstandard2.0\Domain.Services.dll
 C:\Users\LoisLane\Desktop\2Ring\2RingEmployeesMgmt\Domain.Services\obj\Debug\netstandard2.0\Domain.Services.pdb
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Domain.Services\bin\Debug\netstandard2.0\Domain.Services.deps.json
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Domain.Services\bin\Debug\netstandard2.0\Domain.Services.dll
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Domain.Services\bin\Debug\netstandard2.0\Domain.Services.pdb
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Domain.Services\bin\Debug\netstandard2.0\Domain.Models.dll
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Domain.Services\bin\Debug\netstandard2.0\Domain.Models.pdb
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Domain.Services\obj\Debug\netstandard2.0\Domain.Services.csprojAssemblyReference.cache
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Domain.Services\obj\Debug\netstandard2.0\Domain.Services.AssemblyInfoInputs.cache
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Domain.Services\obj\Debug\netstandard2.0\Domain.Services.AssemblyInfo.cs
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Domain.Services\obj\Debug\netstandard2.0\Domain.Services.csproj.CoreCompileInputs.cache
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Domain.Services\obj\Debug\netstandard2.0\Domain.Services.csproj.CopyComplete
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Domain.Services\obj\Debug\netstandard2.0\Domain.Services.dll
+E:\_MPA_Code\w2Ring\Zadanie\2RingEmployeesMgmtBE\Domain.Services\obj\Debug\netstandard2.0\Domain.Services.pdb

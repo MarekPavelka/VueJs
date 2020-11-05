@@ -67,7 +67,9 @@ namespace Domain.Services
             if (dbEmployee == null) return false;
 
             _dbContext.SetEntityState(employee.Position, State.Unchanged);
-            if (employee.Position.Id != dbEmployee.Position.Id)
+            if(dbEmployee.Position == null)
+                UpdatePositionHistory(dbEmployee, employee.Position);
+            else if (employee.Position.Id != dbEmployee.Position.Id)
                 UpdatePositionHistory(dbEmployee, employee.Position);
 
             UpdateEmployeeProperties(dbEmployee, employee);

@@ -6623,11 +6623,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\LoisLane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Infrastructure\\obj\\",
+      "outputPath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LoisLane\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6643,11 +6643,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Domain.Models\\Domain.Models.csproj": {
-              "projectPath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Domain.Models\\Domain.Models.csproj"
+            "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Domain.Models\\Domain.Models.csproj": {
+              "projectPath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Domain.Models\\Domain.Models.csproj"
             },
-            "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Domain.Services\\Domain.Services.csproj": {
-              "projectPath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Domain.Services\\Domain.Services.csproj"
+            "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Domain.Services\\Domain.Services.csproj": {
+              "projectPath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Domain.Services\\Domain.Services.csproj"
             }
           }
         }

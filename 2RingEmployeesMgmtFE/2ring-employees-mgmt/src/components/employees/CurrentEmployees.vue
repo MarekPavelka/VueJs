@@ -44,7 +44,13 @@
               <td>
                 {{ employee | employeeFullName }}
               </td>
-              <td>{{ employee.Position.PositionName }}</td>
+              <td>
+                {{
+                  employee.Position.Id == 0
+                    ? "N/A"
+                    : employee.Position.PositionName
+                }}
+              </td>
               <td class="text-right">
                 <!-- <router-link class="btn btn-sm btn-secondary" to=""></router-link> -->
                 <b-button
@@ -147,7 +153,7 @@ export default class CurrentEmployees extends Vue {
       const allEmployees = await EmployeeService.getAllEmployees();
       this.currentEmployees = allEmployees.filter((e) => e.IsArchived == false);
     } catch (error) {
-      this.$notification.error(error);
+      this.showErrorNotification(error);
     } finally {
       this.isLoadingData = false;
     }
@@ -156,10 +162,12 @@ export default class CurrentEmployees extends Vue {
   navigateToCreateEmployee(): void {
     this.$router.push(this.addEmployeeRoute);
   }
+
   navigateToEditEmployee(employeeId: number): void {
     this.editEmployeeRoute.params = { id: employeeId };
     this.$router.push(this.editEmployeeRoute);
   }
+
   async archiveEmployee(employee: Employee): Promise<void> {
     try {
       this.isLoadingData = true;
@@ -169,13 +177,14 @@ export default class CurrentEmployees extends Vue {
         (e) => e.Id != employee.Id
       );
     } catch (error) {
-      this.$notification.error(error);
+      this.showErrorNotification(error);
     } finally {
       this.selectedEmployee = new Employee();
       this.$root.$emit("bv::hide::modal", "modal-archive");
       this.isLoadingData = false;
     }
   }
+
   async deleteEmployee(employee: Employee): Promise<void> {
     try {
       this.isLoadingData = true;
@@ -185,11 +194,23 @@ export default class CurrentEmployees extends Vue {
       );
       this.$notification.success("Employee deleted successfully");
     } catch (error) {
-      this.$notification.error(error.response.data);
+      if (error.response.data) {
+        this.showErrorNotification(error);
+      } else {
+        this.$notification.error(error);
+      }
     } finally {
       this.selectedEmployee = new Employee();
       this.$root.$emit("bv::hide::modal", "modal-archive");
       this.isLoadingData = false;
+    }
+  }
+
+  private showErrorNotification(error: any): void {
+    if (error.response) {
+      this.$notification.error(error.response.data);
+    } else {
+      this.$notification.error(error.toString());
     }
   }
 }

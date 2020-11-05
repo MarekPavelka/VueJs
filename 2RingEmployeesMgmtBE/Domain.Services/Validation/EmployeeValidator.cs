@@ -13,7 +13,7 @@ namespace Domain.Services.Validation
             RuleFor(e => e.Birthday).NotEmpty();
             RuleFor(e => e.Birthday).Must((e, birthday) => IsDateFromPast(birthday)).WithMessage($"Employee {nameof(Employee.Birthday)} is not date from past");
             RuleFor(e => e.StartDate).NotEmpty();
-            RuleFor(e => e.StartDate).Must((e, startdate) => IsDateFromFuture(startdate)).WithMessage($"Employee {nameof(Employee.StartDate)} already passed");
+            RuleFor(e => e.StartDate).Must((e, startdate) => IsDateFromFuture(startdate)).WithMessage($"Employee {nameof(Employee.StartDate)} already passed").When(e => e.Id == 0);
             RuleFor(e => e.Position).NotEmpty();
             RuleFor(e => e.Position).ChildRules(p =>
             {

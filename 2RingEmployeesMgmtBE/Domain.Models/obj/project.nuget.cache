@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sQRk6sWCExzgbFHjXOhTyUBBxJEu/4RugwQAec0vSGJGLRmbI8Csn2Zo1c7vY5FwKT2jDHDszrY2p7aWM5kW6A==",
+  "dgSpecHash": "Izkdxdghe1hz/Alzw+fhpmBtjNbnEKDKqpgpLhjd5xcq4cITWYj35SgSM5PBXm5WbrZtI1DU4sgOVPEBCZuCag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LoisLane\\Desktop\\2Ring\\2RingEmployeesMgmt\\Domain.Models\\Domain.Models.csproj",
+  "projectFilePath": "E:\\_MPA_Code\\w2Ring\\Zadanie\\2RingEmployeesMgmtBE\\Domain.Models\\Domain.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LoisLane\\.nuget\\packages\\json.net\\1.0.23\\json.net.1.0.23.nupkg.sha512",
     "C:\\Users\\LoisLane\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
